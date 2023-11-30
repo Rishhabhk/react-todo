@@ -40,6 +40,10 @@ I have used MUI to make the UI more comfortable and attractive to the user.
 ## On clicking on the clear all button in task list page, all the tasks will be deleted and a message will be shown that no task added.
 ![image](https://github.com/Rishhabhk/task-management/assets/117934626/c2d4ffc6-d056-44c9-abe5-fcd2f1c617af)
 
+# Test 
+I have used Jest library for testing.
+I have created three separate files in tests folder for each component(AddTask, EditTask, TaskList).
+All the tests are passing.
 
 
 ## drive link for the first question
