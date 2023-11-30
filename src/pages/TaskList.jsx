@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, IconButton, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -11,8 +11,7 @@ import './TaskList.css'
 
 
 const TaskList = ({ taskList, setTaskList }) => {
-    
-    // console.log(taskList);
+
     const deleteTask = (id) => {
         const updatedTasks = taskList.filter((elem) => {
             return id !== elem.id;
@@ -28,16 +27,16 @@ const TaskList = ({ taskList, setTaskList }) => {
 
     const toggleTaskStatus = (id) => {
         const updatedTasks = taskList.map((task) => {
-          if (task.id === id) {
-            // Toggle the status
-            task.status = !task.status;
-          }
-          return task;
+            if (task.id === id) {
+                // Toggle the status
+                task.status = !task.status;
+            }
+            return task;
         });
-    
+
         setTaskList(updatedTasks);
         localStorage.setItem('taskItems', JSON.stringify(updatedTasks));
-      };
+    };
 
     return (
         <div className='taskListWrapper'>

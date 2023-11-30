@@ -7,8 +7,8 @@ import './EditTask.css'
 const EditTask = ({ taskList, setTaskList }) => {
   const navigate = useNavigate();
   const { '*': params } = useParams();
-   // Add a check for params being undefined
-   if (!params) {
+  // Add a check for params being undefined
+  if (!params) {
     // Handle the case where params is undefined (e.g., redirect or show an error)
     // You might want to adjust this based on your requirements
     return <div>Invalid URL</div>;
@@ -64,8 +64,8 @@ const EditTask = ({ taskList, setTaskList }) => {
       <Typography variant='h3' marginBottom={2}>Edit TASK</Typography>
       <form action="#" onSubmit={submitTask} className='taskForm'>
         <TextField label="Task name" variant='outlined'
-        margin="dense"
-        fullWidth
+          margin="dense"
+          fullWidth
           minRows={4}
           color='primary'
           type="text"
@@ -76,8 +76,8 @@ const EditTask = ({ taskList, setTaskList }) => {
           required
         />
         <TextField label="Description" variant='outlined'
-        margin="dense"
-        fullWidth
+          margin="dense"
+          fullWidth
           color='primary'
           multiline
           rows={4}
@@ -103,7 +103,7 @@ const EditTask = ({ taskList, setTaskList }) => {
           </Select>
         </FormControl>
         <br />
-        <Button type='submit' variant='contained'  style={{marginTop:"1rem"}} size='large'>Edit Task</Button>
+        <Button type='submit' variant='contained' style={{ marginTop: "1rem" }} size='large'>Edit Task</Button>
       </form>
     </div>
   )

@@ -1,17 +1,17 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
+import { BrowserRouter } from 'react-router-dom'; 
 import '@testing-library/jest-dom';
 import TaskList from '../pages/TaskList';
 
 test('renders TaskList component', () => {
   const taskList = [
     { id: '1', title: 'Task 1', desc: 'Description 1', priority: 1, status: false },
-    // Add more sample tasks as needed
+    
   ];
 
   render(
-    <BrowserRouter> {/* Wrap your component with BrowserRouter */}
+    <BrowserRouter>
       <TaskList taskList={taskList} setTaskList={() => {}} />
     </BrowserRouter>
   );
@@ -28,7 +28,7 @@ test('handles checkbox click', () => {
   const setTaskListMock = jest.fn();
 
   render(
-    <BrowserRouter> {/* Wrap your component with BrowserRouter */}
+    <BrowserRouter> 
       <TaskList taskList={taskList} setTaskList={setTaskListMock} />
     </BrowserRouter>
   );
@@ -43,4 +43,4 @@ test('handles checkbox click', () => {
   );
 });
 
-// Add more tests as needed
+

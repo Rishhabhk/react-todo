@@ -1,7 +1,7 @@
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
-import {  useState } from 'react';
+import { useState } from 'react';
 import React from 'react'
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './AddTask.css'
 
 const AddTask = ({ setTaskList }) => {
@@ -28,8 +28,8 @@ const AddTask = ({ setTaskList }) => {
             const updatedTaskList = [...prevTaskList, newTask];
 
             updatedTaskList.sort((a, b) => {
-                if (!a.priority) return 1; 
-                if (!b.priority) return -1; 
+                if (!a.priority) return 1;
+                if (!b.priority) return -1;
 
                 return a.priority - b.priority;
             })
@@ -38,7 +38,7 @@ const AddTask = ({ setTaskList }) => {
 
             return updatedTaskList;
         });
-      
+
 
         setNewTitle('');
         setNewDesc('');
@@ -51,7 +51,7 @@ const AddTask = ({ setTaskList }) => {
         <main className='addTaskWrapper'>
             <Typography variant='h3' marginBottom={3}>ADD TASK</Typography>
             <form action="#" onSubmit={submitTask} className='taskForm'>
-                <TextField label="Task name" variant='outlined' fullWidth 
+                <TextField label="Task name" variant='outlined' fullWidth
                     margin="dense"
                     minRows={4}
                     color='primary'
@@ -64,7 +64,7 @@ const AddTask = ({ setTaskList }) => {
                 />
                 {/* <br /> */}
                 <TextField label="Description" variant='outlined' fullWidth
-                margin="dense"
+                    margin="dense"
                     color='primary'
                     multiline
                     rows={4}
@@ -90,7 +90,7 @@ const AddTask = ({ setTaskList }) => {
                         <MenuItem value={1}>High</MenuItem>
                     </Select>
                 </FormControl>
-                <Button type='submit' variant='contained' style={{marginTop:"1rem"}} size='large' >AddTask</Button>
+                <Button type='submit' variant='contained' style={{ marginTop: "1rem" }} size='large' >AddTask</Button>
             </form>
         </main>
     )
