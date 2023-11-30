@@ -90,7 +90,7 @@ const AddTask = ({ setTaskList }) => {
                         <MenuItem value={1}>High</MenuItem>
                     </Select>
                 </FormControl>
-                <Button type='submit' variant='contained' style={{ marginTop: "1rem" }} size='large' >AddTask</Button>
+                <Button type='submit' variant='contained' style={{ marginTop: "1rem" }} size='large' >Add Task</Button>
             </form>
         </main>
     )
