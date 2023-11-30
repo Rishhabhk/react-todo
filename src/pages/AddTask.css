@@ -1,0 +1,19 @@
+.addTaskWrapper{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+.taskForm{
+    background-color: #ffffff5d;
+    box-shadow: 0 0 6px -5px black;
+    padding: 2rem 2rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    /* gap: 1rem; */
+    max-width: 40rem;
+
+}
+

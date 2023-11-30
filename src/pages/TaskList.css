@@ -1,0 +1,57 @@
+.taskListWrapper{
+    /* background-color: rgb(129, 158, 184); */
+    margin-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.addClearBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.addedTasks{
+    list-style: none;
+    margin: 0 0.1rem;
+}
+
+.task {
+    background-color: #ffffff3b;
+    box-shadow: 0 0 6px -5px black;
+    margin-bottom: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    overflow-wrap: break-word;
+    width: 40rem;
+}
+
+
+.taskFirstRow{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    
+}
+
+@media screen and (max-width: 700px){
+    .task{
+        width: 30rem;
+    }
+}
+    
+@media screen and (max-width: 500px){
+    .task{
+        width: 25rem;
+    }
+}
+@media screen and (max-width: 425px){
+    .task{
+        width: 20rem;
+    }
+}
+
