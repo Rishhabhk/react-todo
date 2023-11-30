@@ -2,10 +2,17 @@ import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typograph
 import { useState } from 'react';
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
+import './EditTask.css'
 
 const EditTask = ({ taskList, setTaskList }) => {
   const navigate = useNavigate();
   const { '*': params } = useParams();
+   // Add a check for params being undefined
+   if (!params) {
+    // Handle the case where params is undefined (e.g., redirect or show an error)
+    // You might want to adjust this based on your requirements
+    return <div>Invalid URL</div>;
+  }
   const [title, desc, priority, id] = params.split('/').map(param => param ? decodeURIComponent(param) : null);
 
   console.log('Title:', title);
@@ -53,10 +60,12 @@ const EditTask = ({ taskList, setTaskList }) => {
 
 
   return (
-    <div>
-      <Typography variant='h3'>Edit TASK</Typography>
-      <form action="#" onSubmit={submitTask}>
+    <div className='editTaskWrapper'>
+      <Typography variant='h3' marginBottom={2}>Edit TASK</Typography>
+      <form action="#" onSubmit={submitTask} className='taskForm'>
         <TextField label="Task name" variant='outlined'
+        margin="dense"
+        fullWidth
           minRows={4}
           color='primary'
           type="text"
@@ -67,6 +76,8 @@ const EditTask = ({ taskList, setTaskList }) => {
           required
         />
         <TextField label="Description" variant='outlined'
+        margin="dense"
+        fullWidth
           color='primary'
           multiline
           rows={4}
@@ -78,7 +89,7 @@ const EditTask = ({ taskList, setTaskList }) => {
         />
 
         <br />
-        <FormControl fullWidth>
+        <FormControl fullWidth margin="dense">
           <InputLabel id='newPriority'>Priority</InputLabel>
           <Select
             labelId='newPriority'
@@ -92,7 +103,7 @@ const EditTask = ({ taskList, setTaskList }) => {
           </Select>
         </FormControl>
         <br />
-        <Button type='submit' variant='contained'>Edit Task</Button>
+        <Button type='submit' variant='contained'  style={{marginTop:"1rem"}} size='large'>Edit Task</Button>
       </form>
     </div>
   )
